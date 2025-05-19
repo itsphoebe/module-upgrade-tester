@@ -23,6 +23,8 @@ This repository contains a Jenkins pipeline and supporting scripts to test Terra
 - Module versions tested are already published in registry
 - Modules published in VCS with git tags with valid examples of module deployment of that version
 
+[Example module](https://github.com/itsphoebe/terraform-aws-instance-builder) used to test this pipeline
+
 ## Pipeline Parameters
 
 | Parameter                | Description                                                                                     |
@@ -48,3 +50,13 @@ The following diagram illustrates the overall flow of the pipeline:
 
 The pipeline generates a CSV report (`module_upgrade_results.csv`) that looks like:
 ![report](assets/report.png)
+
+## Customizing the Pipeline for Your Environment
+
+The code is an example! You'll need to tweak the code to make it work for you.
+If you want to use this pipeline in your own environment, you may need to make the following changes:
+
+1. Terraform Cloud/Enterprise (TFE) Instance URL
+2. Organization Name
+3. Workspace Name
+4. Read through the [module preqs](#module-prequisites), the pipeline was written with a specific module structure in mind
